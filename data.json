@@ -1,0 +1,58 @@
+   
+{
+        "Software Engineering": [    
+            {
+                    "role": "Assiocate Software Engineer",
+                    "company": "InRhythm via Goldman Sachs",
+                    "jobTerm": "Jan 2020 - March 2020",
+                    "techStack": "TypeScript, ReactJS, MobX, CSS3, JavaScript, git, MVVM design, Windows 10",
+                    "jobDuties": [
+                        "Contributed to platform e-trade. Worked in Agile-driven environment to effectively maintain project timelines and utilize available resources",
+                        "Collaborated with in-house web designers to create sleek and innovative UI design Pinpointed user experience issues to devise targeted suggestions for creating cohesive user experience"
+                    ]
+                },
+                {
+                    "role": "Assiocate Software Engineer",
+                    "company": "SoulCycle",
+                    "jobTerm": "Oct 2018 - Jan 2020",
+                    "techStack": "ReactJS, CSS3, CSS-in-JS, JavaScript, git, PHP, Node.js, HTML5, RESTful API design, Docker, Sequelize, Jest, SCSS, LESS, Twig, TDD, Relational DB Theory, Accessibility",
+                    "jobDuties": [
+                        "Developed UI in ReactJS, and contributed to Restful API with NodeJS, and Sequelize for internal marketing app. Contributed to existing monolithic structure using PHP, Twig, and SQL",
+                        "Contribute to SoulCycle's UI kit using ReactJS and styled components. Contributed and participated in stand ups, retros and forums to best support SoulCycle's team"
+                    ]    
+                },
+                {
+                    "role": "Software Engineer Intern",
+                    "company": "SoulCycle",
+                    "jobTerm": "Aug 2017 - May 2018",
+                    "techStack": "JavaScript, git, HTML, CSS, OOP",
+                    "jobDuties": [
+                        "Weekly meetings with senior software engineer to advance knowledge of OOP and Javascript"
+                    ]    
+                }
+        ], 
+        
+         "Diversity & Inclusion": [
+            {
+                "role": "Lead Of Employee Resource Groups",
+                "company": "SoulCycle",
+                "jobTerm": "Aug 2017 - Jan 2020",
+                "techStack": "JavaScript, git, HTML, CSS, OOP",
+                "jobDuties": [
+                    "Leading discussions regarding queer diversity at SoulCycle, oversaw all marketing of Pride campaign and participated in promo."
+                ]    
+            },
+            {
+                "role": "Public Speaker",
+                "company": "Lesbians Who Tech",
+                "jobTerm": "Feb 28th 2019",
+                "techStack": "What you should know about TTD & pairprogramming",
+                "jobDuties": [
+                    "Public speaker at Lesbians Who Tech Summit 2019 on behalf of SoulCycle's Engineering team, topics included test driven development and pair programming."
+                ]    
+            }
+    ]
+}
+
+
+
