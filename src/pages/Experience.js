@@ -1,16 +1,10 @@
 import React from 'react';
-import { NavBar, Container, Resume } from 'Components/components'
-import Theme from '../global/theme/Theme'
-import GlobalStyles from '../global/theme/GlobalStyles'
+import MainContainer from './components/MainContainer'
 
 const Experience = () => (
-    <Theme>
-        <GlobalStyles />
-        <NavBar />
-            <Container>
-                <Resume />
-            </Container>
-    </Theme>
+    <MainContainer>
+        <Resume />
+    </MainContainer>
 );
 
 export default Experience;

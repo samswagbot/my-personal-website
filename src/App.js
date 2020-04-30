@@ -7,7 +7,6 @@ import Routes from './global/routes/index';
 const App = () => (
     <Router history={history}>
         <Routes /> 
-      
     </Router>
 )
 

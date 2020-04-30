@@ -52,33 +52,27 @@ const Resume = () => {
 
     const renderJobData = () => {  
         var jobs = [];
-       for (var key in data) {
-         data[key].map(job => {
+        var titles = [];
+       for (var job in data) {
+        // titles.push(key); 
+        (
+            <StyledResumeSectionTitles key={job}>
+                 {job}
+            </StyledResumeSectionTitles>
+        )
+         data[job].map(job => {
             jobs.push(job)
          }) 
         }
         setJob(jobs)
     }    
-console.log(data)
+
     return (
         <StyledJobCtn>
              <StyledResumeDownload href={ResumeFile} download="Samson Mossallam's Resume">
                     Download <DownloadIcon style={{ marginLeft: "5px" }} />
             </StyledResumeDownload>
-            {header.map(title => {
-                return(
-                    <>
-                <StyledResumeSectionTitles key={title}>
-                        {title}
-                 </StyledResumeSectionTitles>
-                    <Job job={job}/>        
-                    </>
-                )
-            }
-            
-            )
-            
-            }
+                <Job job={job}/>                    
         </StyledJobCtn>
     )
 }

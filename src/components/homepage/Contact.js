@@ -105,19 +105,30 @@ const Contact = () => {
         msg: '',
     })
 
+    const encode = (data) => {
+        const formData = new FormData();
+        Object.keys(data).forEach((k)=>{
+          formData.append(k,data[k])
+        });
+        return formData
+      }
     const updateFormValue = e => {
         const {name, value} = e.target
         setForm({...form, [name]: value})
     }
     
     const submitForm = e => {
-        const { fName, msg, email } = form;
-        e.preventDefault()
-     
+        e.preventDefault();
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...form  })
+          })
+            .then(() => alert("Success!"))
+            .catch(error => alert(error));
      
     }
 
-    
     return (
         <>
             <StyledContactQuestion>
