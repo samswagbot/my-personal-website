@@ -48,13 +48,13 @@ module.exports = {
       }
     },
     output: {
-      path: __dirname + '/build',
+      path: __dirname + '/dist',
       publicPath: '/',
       filename: 'main.js'
     }, 
     devServer: {
       publicPath: "/",
-      contentBase: "./build",
+      contentBase: "./dist",
       hot: true,
       historyApiFallback: true
     }
