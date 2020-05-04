@@ -36,25 +36,7 @@ const JobDuties = styled.p`
     text-align: ${p => p.theme.fontAlign.justify};
     line-height: 25px;
     margin-top: 5px;
-    a {
-        cursor: pointer;
-        text-decoration: none;    
-        color: ${p => p.theme.colors.burgundy};
-        transition: opacity .5s, border-bottom .5s;
-        font-weight: ${p => p.theme.fontWeight.extraBold};
-            &:hover {
-                border-bottom: ${p => p.theme.borders.navItemBottomBorderActive};
-                opacity: ${p => p.theme.opacity.mainOpacity};
-            }
-            &:visited {
-                color: ${p => p.theme.colors.lightGray};
-                &:hover {
-                    border-bottom: ${p => p.theme.borders.navItemBottomBorderVisited};
-                    opacity: ${p => p.theme.opacity.mainOpacity};
-                }
-            }
-        }
-    
+    width: 75%;
 `
 const Job = ({ job }) => {
     return (

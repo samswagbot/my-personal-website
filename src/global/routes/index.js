@@ -19,7 +19,7 @@ const Routes = () => {
                 <Route path="/experience">
                     <Experience/>
                 </Route>
-                <Route path="/talks">
+                <Route path="/talksandcampaigns">
                     <Talks/>
                 </Route>
                 <Route path="/djing">

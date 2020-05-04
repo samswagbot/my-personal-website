@@ -1,14 +1,14 @@
-import React,{ useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import data from '../../../data.json';
 import { Job } from 'Components/components';
 import { DownloadIcon } from 'Assets/svgs/svgs';
-import { ResumeFile } from 'Assets/pdfs/pdfs';
+import { ResumeFile } from '../../assets/documents/documents';
 
 const StyledJobCtn = styled.div`
     margin-right: auto;
     margin-left: auto;
-    width: 60%;
+    width: 50%;
     text-align: ${p => p.theme.fontAlign.left};
 `
 const StyledResumeSectionTitles = styled.h3`
@@ -22,7 +22,6 @@ const StyledResumeSectionTitles = styled.h3`
 
 const StyledResumeDownload = styled.a`
     background-color: ${p => p.theme.colors.taxiYellow};
-    padding: 5px;
     border-radius: 5px;
     display: flex;
     color: white;  
@@ -37,42 +36,23 @@ const StyledResumeDownload = styled.a`
         }
 
 `
-
 const Resume = () => {
-    const [job, setJob] = useState([])
-    
-    const header = [
-        'software',
-        'diversity'
-    ]
-
-    useEffect(() => {
-        renderJobData();
-    }, [])
-
-    const renderJobData = () => {  
-        var jobs = [];
-        var titles = [];
-       for (var job in data) {
-        // titles.push(key); 
-        (
-            <StyledResumeSectionTitles key={job}>
-                 {job}
-            </StyledResumeSectionTitles>
-        )
-         data[job].map(job => {
-            jobs.push(job)
-         }) 
-        }
-        setJob(jobs)
-    }    
-
+   
     return (
         <StyledJobCtn>
              <StyledResumeDownload href={ResumeFile} download="Samson Mossallam's Resume">
                     Download <DownloadIcon style={{ marginLeft: "5px" }} />
             </StyledResumeDownload>
-                <Job job={job}/>                    
+                {Object.entries(data).map(resumeTitles => {
+                    return (  
+                        <div key={resumeTitles}>
+                            <StyledResumeSectionTitles >
+                                {resumeTitles[0]}
+                            </StyledResumeSectionTitles>
+                            <Job job={resumeTitles[1]}/>
+                        </div>
+                    )
+                })}                   
         </StyledJobCtn>
     )
 }

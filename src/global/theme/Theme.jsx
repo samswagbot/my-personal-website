@@ -11,6 +11,7 @@ const theme = {
     },
     fonts: [],
     fontSizes: {
+        tiny: '12px',
         extraSmall: '14px',
         small: '16px',
         medium: '22px',

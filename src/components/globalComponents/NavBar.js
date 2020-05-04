@@ -71,11 +71,11 @@ const NavBar = () =>  {
     const codepen = "https://codepen.io/samswagbot";
 
     const navbarLinks = {
-        home: '/',
-        experience: '/experience',
-        talks: '/talks',
-        djing: '/djing',
-        code: '/code',
+        "home": '/',
+        "experience": '/experience',
+        "code": '/code',
+        "talks & campaigns": '/talksandcampaigns',
+        "djing": '/djing',
     }
 
     const renderNavTitles = () => {
@@ -83,6 +83,7 @@ const NavBar = () =>  {
             return (
              <StyledNavItem key={title}>
                  <Link to={title[1]}>
+                 {console.log(title)}
                     {title[0] === 'home' ? <HomeIcon /> : title[0]}
                  </Link>
               </StyledNavItem>  

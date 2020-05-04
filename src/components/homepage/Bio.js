@@ -2,10 +2,11 @@ import React from 'react'
 import styled from "styled-components";
 import { LinkedinIcon } from 'Assets/svgs/svgs';
 import { Link } from 'react-router-dom';
+import { Anchor } from 'Components/components'
 import { 
     ResumeFile,
     CoverLetter
-} from 'Assets/pdfs/pdfs'
+} from 'Assets/documents/documents'
 
 const StyledBioHeader = styled.p`
     display: flex;
@@ -23,25 +24,6 @@ const StyledParagraph = styled.p`
     font-size:  ${p => p.theme.fontSizes.small};
     text-align:  ${p => p.theme.fontAlign.justify};
     font-weight: ${p => p.theme.fontWeight.thin};
-
-      a {
-        cursor: pointer;
-        text-decoration: none;    
-        color: ${p => p.theme.colors.burgundy};
-        transition: opacity .5s, border-bottom .5s;
-        font-weight: ${p => p.theme.fontWeight.extraBold};
-            &:hover {
-                border-bottom: ${p => p.theme.borders.navItemBottomBorderActive};
-                opacity: ${p => p.theme.opacity.mainOpacity};
-            }
-            &:visited {
-                color: ${p => p.theme.colors.lightGray};
-                &:hover {
-                    border-bottom: ${p => p.theme.borders.navItemBottomBorderVisited};
-                    opacity: ${p => p.theme.opacity.mainOpacity};
-                }
-            }
-        }
         svg {
             fill: ${p => p.theme.colors.burgundy};
             position: relative;
@@ -63,9 +45,9 @@ const Bio = () => {
                     With my experiance at <BuzzWords>SoulCycle & Goldman
                     Sachs</BuzzWords>, I applied my passion for Front End technologies by contributing
                     to large scale applications. To see more of my previous experiance check out my
-                        <a href={ResumeFile} download="Samson Mossallam's Resume.pdf"> resume</a>, 
-                        <a href={CoverLetter} download="Samson Mossallam's Cover Letter.pdf"> cover letter </a> or   
-                        <a href={linkedin}> <LinkedinIcon/></a>.
+                        <Anchor href={ResumeFile} download="Samson Mossallam's Resume.pdf"> resume</Anchor>, 
+                        <Anchor href={CoverLetter} download="Samson Mossallam's Cover Letter.pdf"> cover letter </Anchor> or   
+                        <Anchor href={linkedin}> <LinkedinIcon/></Anchor>.
                 </StyledParagraph>
                 <StyledBioHeader>Front End Development:</StyledBioHeader>
                     <StyledParagraph>
@@ -83,7 +65,7 @@ const Bio = () => {
                          build allyship. Whether it's being a developer or a leader, I search to find effective, 
                          creative, and smart solutions. Check out my
                             <Link to="/talks"> talk </Link> or 
-                            <a href={prideCampaign} target="_blank"> pride campaign </a> at SoulCycle!
+                            <Anchor href={prideCampaign} target="_blank"> pride campaign </Anchor> at SoulCycle!
                 </StyledParagraph>
                 <StyledBioHeader>Before Coding:</StyledBioHeader>   
                     <StyledParagraph>

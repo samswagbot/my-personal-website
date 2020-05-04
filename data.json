@@ -51,8 +51,102 @@
                     "Public speaker at Lesbians Who Tech Summit 2019 on behalf of SoulCycle's Engineering team, topics included test driven development and pair programming."
                 ]    
             }
-    ]
+        ],
+        "Education": [
+            {
+                "role": "Pace University",
+                "company": "M.S. Software Engineering & Development",
+                "jobTerm": "Sept 2016 - May 2018",
+                "techStack": "GPA 3.7 Dean's Scholarship, Thank You Note Scholorship",
+                "jobDuties": [
+                    "Formal Requirements, Mobile Web Development, Quality Assurance, Requirements Engineering, Software Reliability, Quality Assurance, Project Management, Database System Management, Unix/Linux Programming."
+                ]    
+            },
+            {
+                "role": "SUNY Purchase Conservatory of Music",
+                "company": "B.A Audio Engineering",
+                "jobTerm": "Sept 2010 - May 2013",
+                "techStack": "GPA 3.8",
+                "jobDuties": [
+                    "Music theory, Studio Production, Composition, Recording Engineer."
+                ]    
+            },
+            {
+                "role": "Five Towns College",
+                "company": "Audio Engineering",
+                "jobTerm": "Sept 2009 - May 2010",
+                "techStack": "",
+                "jobDuties": []    
+            }
+        ],
+        "Tech": [
+            {
+                "role": "Audio Visual Technician",
+                "company": "SoulCycle",
+                "jobTerm": "Sept 2016 - Oct 2018",
+                "techStack": "Crestron, Zoom, London Architect",
+                "jobDuties": [
+                     "Remotely maintained nationwide audio support for studios and managed audio conference room meetings and special events set up",
+                     "supported all AV equipment in NYC corporate office provided audio training for all new instructors."
+                ]    
+            },
+            {
+                "role": "Genius",
+                "company": "Apple",
+                "jobTerm": "Jun 2014 – Jan 2016",
+                "techStack": "ACMT certificated",
+                "jobDuties": [
+                    "Repairing Mac, iPhone, Watch and iPad, providing creative solutions for customers, and troubleshooting iOS, Apple TV, OS X, Watch OS."
+                ]    
+            },
+            {
+                "role": "Family Room Specialist",
+                "company": "Apple",
+                "jobTerm": "Sep 2013 – Jun 2014",
+                "techStack": "",
+                "jobDuties": [
+                    "troubleshooting iOS, teaching personalized lessons for Mac, iPhone and iPad, and repairing relationships with customers."
+                ]    
+            },
+            {
+                "role": "Mentor",
+                "company": "Apple",
+                "jobTerm": "Aug 2012 – Sep 2013",
+                "techStack": "",
+                "jobDuties": [
+                    "training new hired employees, delivering current content and procedures, and facilitating New York and Connecticut markets in-store trainings."
+                ]    
+            },
+            {
+                "role": "Specialist",
+                "company": "Apple",
+                "jobTerm": "Oct 2011 – Sep 2013",
+                "techStack": "",
+                "jobDuties": [
+                    "sales specialist, troubleshooting hardware and software, creating the best user experience while providing excellence in customer service, ranked among top 10% of sales specialists within store location."
+                ]    
+            },
+            {
+                "role": "Audio Engineer Intern",
+                "company": "Electric Lady Studios",
+                "jobTerm": "Oct 2011 – Sep 2013",
+                "techStack": "",
+                "jobDuties": [
+                    "Assisting engineer, breakdown and set up sessions, inventory gear."
+                ]    
+            }
+        ],
+        "Giving Back": [
+            {
+                "role": "Organizer",
+                "company": "Ali Forney",
+                "jobTerm": "Mar 2018",
+                "techStack": "",
+                "jobDuties": [
+                     "Offering hair, makeup, and barber services for Ali Forney's annual prom for over 50 youth. Created 'Day of Beauty' for LGBT homeless youth of Ali Forney to have monthly haircuts."
+                ]    
+            }
+       ]
+
 }
-
-
 

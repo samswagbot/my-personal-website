@@ -1,6 +1,8 @@
 //Global Components
 import NavBar from './globalComponents/NavBar';
 import Container from './globalComponents/Container';
+import TitleHeader from './globalComponents/TitleHeader';
+import Anchor from './globalComponents/Anchor';
 
 //HomePage
 import Header from './homepage/Header';
@@ -15,6 +17,8 @@ export {
     NavBar,
     Container,
     Header,
+    TitleHeader,
+    Anchor,
     Bio,
     Contact,
     Resume,
