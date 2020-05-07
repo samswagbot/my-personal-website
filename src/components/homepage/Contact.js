@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { H2 } from 'Components/components';
+import { H2, Input } from 'Components/components';
 
 const ContactForm = styled.form`
   display: flex;
@@ -14,39 +14,17 @@ const FormLabel = styled.label`
   color: ${p => p.theme.colors.taxiYellow};
   margin-top: 20px;
   margin-bottom: 5px;
-  overflow-y: scroll;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
 `;
-const FormInput = styled.input`
-  width: 100%;
-  height: 40px;
-  font-size: ${p => p.theme.fontSizes.small};
-  text-indent: 10px;
-  color: ${p => p.theme.colors.lightGray};
-  border: ${p => p.theme.borders.formInputBorder};
-  border-left: 3px solid;
-  border-radius: 5px;
-  transition: border-color 0.5s ease-out;
 
-  &:focus {
-    outline-width: 0;
-  }
-  &::placeholder {
-    color: ${p => p.theme.colors.lightGray};
-  }
-  &:not(:placeholder-shown) {
-    border: ${p => p.theme.borders.formInputInvalidBorder};
-    border-left: 3px solid ${p => p.theme.colors.burgundy};
-  }
-  &:valid {
-    border: ${p => p.theme.borders.formInputValidBorder};
-    border-left: 3px solid ${p => p.theme.colors.taxiYellow};
-  }
-  &[type='text'] {
-    text-transform: capitalize;
-  }
-  &[type='email'] {
-    text-transform: lowercase;
-  }
+const InputGroup = styled.div`
+  position: relative;
+  margin-bottom: 45px;
+  width: 100%;
 `;
 
 const FormMessage = styled.textarea`
@@ -124,21 +102,26 @@ const Contact = () => {
     <>
       <H2>Interested in collaborating on a project?</H2>
       <ContactForm onSubmit={e => submitForm(e)}>
-        <FormLabel htmlFor="First Name">First Name</FormLabel>
-        <FormInput
-          id="First Name"
-          type="text"
-          placeholder="first name.."
-          name="fName"
-          aria-label="First Name"
-          aria-required="true"
-          value={form.fName}
-          onChange={e => updateFormValue(e)}
-          required
-          pattern="[A-Za-z]{3}"
-        />
+        <InputGroup>
+          <Input
+            id="First Name"
+            type="text"
+            placeholder="First Name"
+            name="fName"
+            aria-label="First Name"
+            aria-required="true"
+            value={form.fName}
+            onChange={e => updateFormValue(e)}
+            required
+            pattern="[A-Za-z]{3}"
+            title="First name should contain only letters"
+          />
+          <span className="highlight"></span>
+          <span className="bar"></span>
+          <FormLabel htmlFor="First Name">First Name</FormLabel>
+        </InputGroup>
         <FormLabel htmlFor="Last Name">Last Name</FormLabel>
-        <FormInput
+        <Input
           id="Last Name"
           aria-label="Last Name"
           aria-required="true"
@@ -148,10 +131,11 @@ const Contact = () => {
           value={form.lName}
           onChange={e => updateFormValue(e)}
           required
-          pattern="[A-Za-z]{3}"
+          pattern="[A-Za-z]+"
+          title="Last name should contain only letters"
         />
         <FormLabel htmlFor="Email">Email</FormLabel>
-        <FormInput
+        <Input
           id="Email"
           aria-label="Email"
           aria-required="true"
@@ -162,6 +146,7 @@ const Contact = () => {
           onChange={e => updateFormValue(e)}
           pattern="\S+.*"
           required
+          title="email address is not valid"
         />
         <FormLabel htmlFor="Message">Message</FormLabel>
         <FormMessage
@@ -171,8 +156,6 @@ const Contact = () => {
           placeholder="Send me some love <3.."
           name="msg"
           value={form.msg}
-          required
-          pattern="\S+.*"
           onChange={e => updateFormValue(e)}
         />
         <SubmitButton type="submit" value="Submit" />

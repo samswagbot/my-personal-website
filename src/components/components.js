@@ -9,6 +9,7 @@ import H2 from './globalComponents/H2';
 import H4 from './globalComponents/H4';
 import DetailText from './globalComponents/DetailText';
 import Span from './globalComponents/Span';
+import Input from './globalComponents/Input'
 
 // HomePage
 import Header from './homepage/Header';
@@ -30,6 +31,7 @@ export {
   H4,
   DetailText,
   Span,
+  Input,
 };
 
 export { Header, Bio, Contact };
