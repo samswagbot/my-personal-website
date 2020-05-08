@@ -6,7 +6,7 @@ const StyledAnchor = styled.a`
   cursor: pointer;
   text-decoration: none;
   color: ${p => p.theme.colors.burgundy};
-  transition: opacity 0.5s, border-bottom 0.5s;
+  transition: opacity 0.5s;
   font-weight: ${p => p.theme.fontWeight.extraBold};
   &:hover {
     border-bottom: ${p => p.theme.borders.navItemBottomBorderActive};

@@ -21,7 +21,7 @@ const StyledHeadline = styled.div`
   letter-spacing: 0.09em;
   font-size: ${p => p.theme.fontSizes.large};
   font-weight: ${p => p.theme.fontWeight.bold};
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 `;
 const StyledHeadShot = styled.img`
   width: 100%;

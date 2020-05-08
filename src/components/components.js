@@ -9,7 +9,10 @@ import H2 from './globalComponents/H2';
 import H4 from './globalComponents/H4';
 import DetailText from './globalComponents/DetailText';
 import Span from './globalComponents/Span';
-import Input from './globalComponents/Input'
+import Input from './globalComponents/Input';
+import Label from './globalComponents/Label';
+import Button from "./globalComponents/Button";
+import Modal from './globalComponents/Modal';
 
 // HomePage
 import Header from './homepage/Header';
@@ -32,6 +35,9 @@ export {
   DetailText,
   Span,
   Input,
+  Label,
+  Button,
+  Modal,
 };
 
 export { Header, Bio, Contact };
