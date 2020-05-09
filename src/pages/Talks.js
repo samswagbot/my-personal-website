@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { TransToolKit, LesbiansWhoTech } from 'Assets/documents/documents';
 import speaker from 'Assets/images/speaker.jpg';
-import { H1, Anchor, Paragraph, H3 } from 'Components/components';
-import MainContainer from './components/MainContainer';
+import { H1, Anchor, Paragraph, H3, MainContainer } from 'Components/components';
 
 const StyledVideoCtn = styled.iframe`
   width: 100%;

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { GithubIcon } from 'Assets/svgs/svgs';
-import { Paragraph, DetailText, Span, H3, Anchor } from 'Components/components';
-import MainContainer from './components/MainContainer';
+import { Paragraph, DetailText, Span, H3, Anchor, MainContainer } from 'Components/components';
+
 
 const StyledCodeCtn = styled.div`
   display: flex;

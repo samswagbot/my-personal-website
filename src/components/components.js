@@ -1,18 +1,19 @@
 // Global Components
 import NavBar from './globalComponents/NavBar';
 import Container from './globalComponents/Container';
-import H1 from './globalComponents/H1';
+import H1 from './globalComponents/Htags/H1';
 import Anchor from './globalComponents/Anchor';
 import Paragraph from './globalComponents/Paragraph';
-import H3 from './globalComponents/H3';
-import H2 from './globalComponents/H2';
-import H4 from './globalComponents/H4';
+import H3 from './globalComponents/Htags/H3';
+import H2 from './globalComponents/Htags/H2';
+import H4 from './globalComponents/Htags/H4';
 import DetailText from './globalComponents/DetailText';
 import Span from './globalComponents/Span';
-import Input from './globalComponents/Input';
-import Label from './globalComponents/Label';
-import Button from "./globalComponents/Button";
-import Modal from './globalComponents/Modal';
+import Input from './globalComponents/FormTags/Input';
+import Label from './globalComponents/FormTags/Label';
+import Button from "./globalComponents/FormTags/Button";
+import Modal from './globalComponents/FormTags/Modal';
+import MainContainer from "./globalComponents/MainContainer";
 
 // HomePage
 import Header from './homepage/Header';
@@ -38,6 +39,7 @@ export {
   Label,
   Button,
   Modal,
+  MainContainer,
 };
 
 export { Header, Bio, Contact };

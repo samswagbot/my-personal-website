@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavBar, Container } from '../../components/components';
+import { NavBar, Container } from '../components';
 import Theme from '../../global/theme/Theme';
 import GlobalStyles from '../../global/theme/GlobalStyles';
 

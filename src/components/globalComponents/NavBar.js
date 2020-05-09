@@ -77,7 +77,6 @@ const NavBar = () => {
     experience: '/experience',
     code: '/code',
     'talks & campaigns': '/talksandcampaigns',
-    djing: '/djing',
   };
 
   const renderNavTitles = () =>

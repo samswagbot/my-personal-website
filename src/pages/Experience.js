@@ -1,6 +1,5 @@
 import React from 'react';
-import MainContainer from './components/MainContainer';
-import { Resume } from '../components/components';
+import { Resume, MainContainer } from '../components/components';
 
 const Experience = () => (
   <MainContainer>
