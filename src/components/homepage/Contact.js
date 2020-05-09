@@ -23,18 +23,16 @@ const Contact = () => {
     showModal: false,
   });
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  }
+  const encode = data =>
+    Object.keys(data)
+      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+      .join('&');
   const updateFormValue = e => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
   const submitForm = e => {
-    e.preventDefault();
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -42,17 +40,26 @@ const Contact = () => {
     })
       .then(() => setForm({ ...form, showModal: true }))
       .catch(error => alert(error));
+    e.preventDefault();
   };
 
   return (
     <>
       <H2>Interested in collaborating on a project?</H2>
-      <ContactForm onSubmit={e => submitForm(e)}>
+      <ContactForm
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        hidden
+        onSubmit={e => submitForm(e)}
+      >
+        <input type="hidden" name="form-name" value="contact" />
         <InputGroup>
           <Input
             id="full-name"
             type="text"
-            name="fullName"
+            name="name"
             aria-label="Full Name"
             aria-required="true"
             value={form.fName}
@@ -93,7 +100,7 @@ const Contact = () => {
         <Button type="submit" value="Submit">
           Submit
         </Button>
-        {form.showModal && <Modal />}
+        {/* {form.showModal && <Modal />} */}
       </ContactForm>
     </>
   );

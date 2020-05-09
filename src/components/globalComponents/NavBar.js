@@ -70,7 +70,7 @@ const StyledSocialMediaLink = styled.a`
 const NavBar = () => {
   const github = 'https://github.com/samswagbot';
   const linkedin = 'https://www.linkedin.com/in/sammossallam/';
-  const codeSandBox = "https://codesandbox.io/u/samswagbot";
+  const codeSandBox = 'https://codesandbox.io/u/samswagbot';
 
   const navbarLinks = {
     home: '/',
