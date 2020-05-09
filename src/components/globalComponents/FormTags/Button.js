@@ -22,18 +22,15 @@ const StyledButton = styled.button`
   }
 `;
 const Button = ({ children, type, value }) => (
-    <StyledButton
-        type={type}
-        value={value}
-    >
-        {children}
-    </StyledButton>
+  <StyledButton type={type} value={value}>
+    {children}
+  </StyledButton>
 );
 
 Button.propTypes = {
-    children: PropTypes.any,
-    type: PropTypes.string,
-    value: PropTypes.string,
+  children: PropTypes.any,
+  type: PropTypes.string,
+  value: PropTypes.string,
 };
 
 export default Button;

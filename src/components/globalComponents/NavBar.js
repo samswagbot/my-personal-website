@@ -6,7 +6,7 @@ import {
   GithubIcon,
   HomeIcon,
   LinkedinIcon,
-  CodePenIcon,
+  CodeSandBoxIcon,
 } from 'Assets/svgs/svgs';
 
 const StyledNavWrapper = styled.nav`
@@ -70,7 +70,7 @@ const StyledSocialMediaLink = styled.a`
 const NavBar = () => {
   const github = 'https://github.com/samswagbot';
   const linkedin = 'https://www.linkedin.com/in/sammossallam/';
-  const codepen = 'https://codepen.io/samswagbot';
+  const codeSandBox = "https://codesandbox.io/u/samswagbot";
 
   const navbarLinks = {
     home: '/',
@@ -100,8 +100,8 @@ const NavBar = () => {
         <StyledSocialMediaLink href={linkedin} target="_blank">
           <LinkedinIcon />
         </StyledSocialMediaLink>
-        <StyledSocialMediaLink href={codepen} target="_blank">
-          <CodePenIcon stroke="white" padding="0" />
+        <StyledSocialMediaLink href={codeSandBox} target="_blank">
+          <CodeSandBoxIcon padding="0" />
         </StyledSocialMediaLink>
       </SocialMediaCtn>
     </StyledNavWrapper>

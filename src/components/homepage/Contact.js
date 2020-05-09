@@ -49,7 +49,7 @@ const Contact = () => {
   return (
     <>
       <H2>Interested in collaborating on a project?</H2>
-      <ContactForm onSubmit={e => submitForm(e)}>
+      <ContactForm onSubmit={e => submitForm(e)} netlify>
         <InputGroup>
           <Input
             id="full-name"
@@ -92,8 +92,10 @@ const Contact = () => {
           />
           <Label htmlFor="Message">Message</Label>
         </InputGroup>
-        <Button type="submit" value="Submit">Submit</Button>
-          {form.showModal && <Modal/>}
+        <Button type="submit" value="Submit">
+          Submit
+        </Button>
+        {form.showModal && <Modal />}
       </ContactForm>
     </>
   );

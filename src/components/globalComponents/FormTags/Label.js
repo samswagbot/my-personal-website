@@ -12,18 +12,13 @@ const StyledLabel = styled.label`
   transition: 0.2s ease all;
 `;
 
-const Label = ({ htmlFor, children}) => {
-    return (
-        <StyledLabel htmlFor={htmlFor}>
-            {children}
-        </StyledLabel>
-    )
-   
-}
+const Label = ({ htmlFor, children }) => (
+  <StyledLabel htmlFor={htmlFor}>{children}</StyledLabel>
+);
 
 Label.propTypes = {
-    htmlFor: PropTypes.string,
-    children: PropTypes.string,
-}
+  htmlFor: PropTypes.string,
+  children: PropTypes.string,
+};
 
 export default Label;

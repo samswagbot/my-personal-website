@@ -13,7 +13,7 @@ const MainContainer = ({ children }) => (
 );
 
 Container.propType = {
-  children: PropTypes.any.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 export default MainContainer;

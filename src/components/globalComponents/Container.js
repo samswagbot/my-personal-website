@@ -13,17 +13,15 @@ const StyledWrapper = styled.div`
   margin-right: auto;
   margin-left: auto;
   width: 50%;
-`; 
+`;
 const Container = ({ children }) => (
   <StyledCtn>
-    <StyledWrapper>
-      {children}
-    </StyledWrapper>
+    <StyledWrapper>{children}</StyledWrapper>
   </StyledCtn>
 );
 
 Container.propType = {
-  children: PropTypes.any,
+  children: PropTypes.element.isRequired,
 };
 
 export default Container;

@@ -11,9 +11,9 @@ import DetailText from './globalComponents/DetailText';
 import Span from './globalComponents/Span';
 import Input from './globalComponents/FormTags/Input';
 import Label from './globalComponents/FormTags/Label';
-import Button from "./globalComponents/FormTags/Button";
+import Button from './globalComponents/FormTags/Button';
 import Modal from './globalComponents/FormTags/Modal';
-import MainContainer from "./globalComponents/MainContainer";
+import MainContainer from './globalComponents/MainContainer';
 
 // HomePage
 import Header from './homepage/Header';
