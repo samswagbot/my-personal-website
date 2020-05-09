@@ -4,9 +4,6 @@ import headshot from 'Assets/images/headshot.jpg';
 import { Bio, Contact } from 'Components/components';
 
 const BioWrapper = styled.div`
-  margin-right: auto;
-  margin-left: auto;
-  width: 50%;
   text-align: ${p => p.theme.fontAlign.center};
 `;
 const StyledHeader = styled.div`

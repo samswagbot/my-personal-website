@@ -8,7 +8,19 @@ const StyledCtn = styled.div`
   align-items: center;
   margin-top: 10px;
 `;
-const Container = ({ children }) => <StyledCtn>{children}</StyledCtn>;
+
+const StyledWrapper = styled.div`
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+`; 
+const Container = ({ children }) => (
+  <StyledCtn>
+    <StyledWrapper>
+      {children}
+    </StyledWrapper>
+  </StyledCtn>
+);
 
 Container.propType = {
   children: PropTypes.any,
