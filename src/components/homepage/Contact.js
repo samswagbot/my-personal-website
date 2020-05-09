@@ -23,13 +23,11 @@ const Contact = () => {
     showModal: false,
   });
 
-  const encode = data => {
-    const formData = new FormData();
-    Object.keys(data).forEach(k => {
-      formData.append(k, data[k]);
-    });
-    return formData;
-  };
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
   const updateFormValue = e => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -49,7 +47,7 @@ const Contact = () => {
   return (
     <>
       <H2>Interested in collaborating on a project?</H2>
-      <ContactForm onSubmit={e => submitForm(e)} netlify>
+      <ContactForm onSubmit={e => submitForm(e)}>
         <InputGroup>
           <Input
             id="full-name"
