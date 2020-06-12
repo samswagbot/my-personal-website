@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 
-import { HomePage, Experience, Talks, Djing, Code } from 'Pages/pages';
+import { HomePage, Experience, Talks, Code } from 'Pages/pages';
 
 const Routes = () => (
   <Router>
@@ -14,9 +14,6 @@ const Routes = () => (
       </Route>
       <Route path="/talksandcampaigns">
         <Talks />
-      </Route>
-      <Route path="/djing">
-        <Djing />
       </Route>
       <Route path="/code">
         <Code />

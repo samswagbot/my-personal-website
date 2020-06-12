@@ -1,16 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import { GithubIcon } from 'Assets/svgs/svgs';
-import { Paragraph, DetailText, Span, H3, Anchor } from 'Components/components';
-import MainContainer from './components/MainContainer';
+import {
+  Paragraph,
+  DetailText,
+  Span,
+  H3,
+  Anchor,
+  MainContainer,
+  Container,
+} from 'Components/components';
 
-const StyledCodeCtn = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+const StyledMainCtn = styled(MainContainer)`
+  > ${Container} {
+    background-color: red;
+    width: 100%;
+  }
 `;
+
 const SinglCodeCtn = styled.div`
   display: flex;
   width: 80%;
@@ -86,78 +93,76 @@ const Code = () => {
     'https://codesandbox.io/embed/landing-page-de0ob?fontsize=14&hidenavigation=1&theme=dark';
 
   return (
-    <MainContainer>
-      <StyledCodeCtn>
-        <SinglCodeCtn>
-          <StyledCodeSandBox
-            src={chatAppCB}
-            title="Chat App"
-            allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
-            sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-          />
-          <StyledCodeCtnText>
-            <StyledHeadingCtn>
-              <StyledCodeSectionTitles>Chat app</StyledCodeSectionTitles>
-              <YearCreated>2019</YearCreated>
-            </StyledHeadingCtn>
-            <StyledCodeSummary>
-              A single-user timeline of posts and messages, which is responsive
-              and scales to viewport size.
-            </StyledCodeSummary>
-            <DetailText>
-              Built With: ReactJS, ES6/JavaScript, Webpack, Express, Styled
-              Components, Material UI
-            </DetailText>
-            <GithubAncor href={gitHubChatApp} target="_blank">
-              <GithubIcon />
-            </GithubAncor>
-          </StyledCodeCtnText>
-        </SinglCodeCtn>
-        <SinglCodeCtn>
-          <StyledCodeSandBox
-            src={findMostFrequentWordCB}
-            title="Find Most Frequent Word and Phrase Tool"
-            allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
-            sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-          />
-          <StyledCodeCtnText>
-            <StyledHeadingCtn>
-              <StyledCodeSectionTitles>
-                Find Most Frequent Word and Phrase Tool
-              </StyledCodeSectionTitles>
-              <YearCreated>2019</YearCreated>
-            </StyledHeadingCtn>
-            <StyledCodeSummary>
-              A program that finds the most frequent word or phrase based on
-              students test scores.
-            </StyledCodeSummary>
-            <DetailText>Built With: ES6/JavaScript, Node.js</DetailText>
-            <GithubAncor href={gitHubFindFrequentTool} target="_blank">
-              <GithubIcon />
-            </GithubAncor>
-          </StyledCodeCtnText>
-        </SinglCodeCtn>
-        <SinglCodeCtn>
-          <StyledCodeSandBox
-            src={landingPageCB}
-            title="landing-page"
-            allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
-            sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-          />
-          <StyledCodeCtnText>
-            <StyledHeadingCtn>
-              <StyledCodeSectionTitles>Landing Page</StyledCodeSectionTitles>
-              <YearCreated>2020</YearCreated>
-            </StyledHeadingCtn>
-            <StyledCodeSummary>A simple landing page</StyledCodeSummary>
-            <DetailText>Built With: HTML5, CSS3 </DetailText>
-            <GithubAncor href={gitHubLandingPage} target="_blank">
-              <GithubIcon />
-            </GithubAncor>
-          </StyledCodeCtnText>
-        </SinglCodeCtn>
-      </StyledCodeCtn>
-    </MainContainer>
+    <StyledMainCtn>
+      <SinglCodeCtn>
+        <StyledCodeSandBox
+          src={chatAppCB}
+          title="Chat App"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        />
+        <StyledCodeCtnText>
+          <StyledHeadingCtn>
+            <StyledCodeSectionTitles>Chat app</StyledCodeSectionTitles>
+            <YearCreated>2019</YearCreated>
+          </StyledHeadingCtn>
+          <StyledCodeSummary>
+            A single-user timeline of posts and messages, which is responsive
+            and scales to viewport size.
+          </StyledCodeSummary>
+          <DetailText>
+            Built With: ReactJS, ES6/JavaScript, Webpack, Express, Styled
+            Components, Material UI
+          </DetailText>
+          <GithubAncor href={gitHubChatApp} target="_blank">
+            <GithubIcon />
+          </GithubAncor>
+        </StyledCodeCtnText>
+      </SinglCodeCtn>
+      <SinglCodeCtn>
+        <StyledCodeSandBox
+          src={findMostFrequentWordCB}
+          title="Find Most Frequent Word and Phrase Tool"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        />
+        <StyledCodeCtnText>
+          <StyledHeadingCtn>
+            <StyledCodeSectionTitles>
+              Find Most Frequent Word and Phrase Tool
+            </StyledCodeSectionTitles>
+            <YearCreated>2019</YearCreated>
+          </StyledHeadingCtn>
+          <StyledCodeSummary>
+            A program that finds the most frequent word or phrase based on
+            students test scores.
+          </StyledCodeSummary>
+          <DetailText>Built With: ES6/JavaScript, Node.js</DetailText>
+          <GithubAncor href={gitHubFindFrequentTool} target="_blank">
+            <GithubIcon />
+          </GithubAncor>
+        </StyledCodeCtnText>
+      </SinglCodeCtn>
+      <SinglCodeCtn>
+        <StyledCodeSandBox
+          src={landingPageCB}
+          title="landing-page"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        />
+        <StyledCodeCtnText>
+          <StyledHeadingCtn>
+            <StyledCodeSectionTitles>Landing Page</StyledCodeSectionTitles>
+            <YearCreated>2020</YearCreated>
+          </StyledHeadingCtn>
+          <StyledCodeSummary>A simple landing page</StyledCodeSummary>
+          <DetailText>Built With: HTML5, CSS3 </DetailText>
+          <GithubAncor href={gitHubLandingPage} target="_blank">
+            <GithubIcon />
+          </GithubAncor>
+        </StyledCodeCtnText>
+      </SinglCodeCtn>
+    </StyledMainCtn>
   );
 };
 

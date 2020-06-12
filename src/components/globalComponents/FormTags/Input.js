@@ -28,10 +28,10 @@ const StyledInput = styled.input`
     font-size: 14px;
     color: ${p => p.theme.colors.taxiYellow};
   }
-  &[type="text"] {
+  &[type='text'] {
     text-transform: capitalize;
   }
-  &[type="email"] {
+  &[type='email'] {
     text-transform: lowercase;
   }
 
@@ -77,7 +77,7 @@ const StyledBar = styled.span`
 
   &:before,
   &:after {
-    content: "";
+    content: '';
     height: 2px;
     width: 0;
     bottom: 1px;
@@ -109,7 +109,7 @@ const Input = ({
   title,
   onChange,
 }) => (
- <>
+  <>
     <StyledInput
       className={className}
       id={id}
@@ -125,9 +125,9 @@ const Input = ({
     >
       {children}
     </StyledInput>
-   <StyledHighlight className="highlight"/>
-   <StyledBar className="bar"/>
-</>
+    <StyledHighlight className="highlight" />
+    <StyledBar className="bar" />
+  </>
 );
 
 Input.propTypes = {

@@ -6,9 +6,6 @@ import data from '../../../data.json';
 import { ResumeFile } from '../../assets/documents/documents';
 
 const StyledJobCtn = styled.div`
-  margin-right: auto;
-  margin-left: auto;
-  width: 50%;
   text-align: ${p => p.theme.fontAlign.left};
 `;
 const StyledResumeSectionTitles = styled(H2)`

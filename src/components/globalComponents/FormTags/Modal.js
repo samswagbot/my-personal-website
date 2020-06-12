@@ -43,16 +43,13 @@ const CloseButton = styled.span`
     cursor: pointer;
   }
 `;
-const Modal = () => {
-    return (
-      <StyledModalCtn>
-        <StyledModalWindow>
-          <div>Thank you so much! Your contact info was submitted!</div>
-          <CloseButton>&times;</CloseButton>
-        </StyledModalWindow>
-      </StyledModalCtn>
-    );
-
-}
+const Modal = () => (
+  <StyledModalCtn>
+    <StyledModalWindow>
+      <div>Thank you so much! Your contact info was submitted!</div>
+      <CloseButton>&times;</CloseButton>
+    </StyledModalWindow>
+  </StyledModalCtn>
+);
 
 export default Modal;
