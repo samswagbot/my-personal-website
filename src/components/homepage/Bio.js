@@ -33,6 +33,7 @@ const Bio = () => {
         for Front End technologies by contributing to large scale applications.
         To see more of my previous experiance check out my
         <Anchor href={ResumeFile} download="Samson Mossallam's Resume.pdf">
+          {' '}
           resume
         </Anchor>
         ,

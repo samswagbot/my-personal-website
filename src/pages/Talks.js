@@ -33,12 +33,18 @@ const StyledTalksTitles = styled(H2)`
     margin: 10px 0;
   }
 `;
+
+const StyledInstagramEmbed = styled(InstagramEmbed)`
+  @media ${p => p.theme.device.tablet} {
+    display: flex;
+    justify-content: center;
+  }
+`;
 const Talks = () => (
   <MainContainer>
     <StyledTalksTitles>Talks</StyledTalksTitles>
-    <InstagramEmbed
+    <StyledInstagramEmbed
       url="https://www.instagram.com/p/Bkqcr1NAS8P/"
-      maxWidth="100%"
       hideCaption
       containerTagName="div"
     />
@@ -79,9 +85,8 @@ const Talks = () => (
       from conference.
     </TalkDetails>
     <StyledTalksTitles>Campaigns</StyledTalksTitles>
-    <InstagramEmbed
+    <StyledInstagramEmbed
       url="https://www.instagram.com/p/ByQMiJpnUQC/"
-      maxWidth="100%"
       hideCaption
       containerTagName="div"
     />
@@ -92,7 +97,7 @@ const Talks = () => (
       Leading the Queer Employee Resource Group, I worked closely with marketing
       to influence and particate a Queer and diverse pride campaign.
     </TalkDetails>
-    <InstagramEmbed
+    <StyledInstagramEmbed
       url="https://www.instagram.com/p/BrDiYTrlY02/"
       maxWidth="100%"
       hideCaption
