@@ -2,12 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import {
-  GithubIcon,
-  HomeIcon,
-  LinkedinIcon,
-  CodeSandBoxIcon,
-} from 'Assets/svgs/svgs';
+import { HomeIcon } from 'Assets/svgs/svgs';
+import { SocialLinks } from '../../components';
 
 const StyledNavWrapper = styled.nav`
   display: flex;
@@ -17,6 +13,10 @@ const StyledNavWrapper = styled.nav`
   top: 0;
   margin-bottom: 50px;
   opacity: 0.9;
+
+  @media ${p => p.theme.device.mobileS} {
+    margin-bottom: 30px;
+  }
 `;
 const StyledLinkCtn = styled.div`
   width: 100%;
@@ -50,28 +50,8 @@ const StyledNavItem = styled.li`
     }
   }
 `;
-const SocialMediaCtn = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-self: flex-end;
-  padding: 25px;
-  flex: 1;
-`;
-const StyledSocialMediaLink = styled.a`
-  padding: 5px;
-  border: none;
-  display: flex;
-  align-self: center;
-  &:hover {
-    opacity: ${p => p.theme.opacity.mainOpacity};
-  }
-`;
 
 const NavBar = () => {
-  const github = 'https://github.com/samswagbot';
-  const linkedin = 'https://www.linkedin.com/in/sammossallam/';
-  const codeSandBox = 'https://codesandbox.io/u/samswagbot';
-
   const navbarLinks = {
     home: '/',
     experience: '/experience',
@@ -93,17 +73,7 @@ const NavBar = () => {
       <StyledLinkCtn>
         <StyledNavBar>{renderNavTitles()}</StyledNavBar>
       </StyledLinkCtn>
-      <SocialMediaCtn>
-        <StyledSocialMediaLink href={github} target="_blank">
-          <GithubIcon />
-        </StyledSocialMediaLink>
-        <StyledSocialMediaLink href={linkedin} target="_blank">
-          <LinkedinIcon />
-        </StyledSocialMediaLink>
-        <StyledSocialMediaLink href={codeSandBox} target="_blank">
-          <CodeSandBoxIcon padding="0" />
-        </StyledSocialMediaLink>
-      </SocialMediaCtn>
+      <SocialLinks />
     </StyledNavWrapper>
   );
 };

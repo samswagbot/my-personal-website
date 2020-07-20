@@ -13,6 +13,10 @@ const ContactForm = styled.form`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
+  @media ${p => p.theme.device.mobileS} {
+    margin-top: 40px;
+  }
 `;
 
 const Contact = () => {
@@ -100,7 +104,7 @@ const Contact = () => {
         <Button type="submit" value="Submit">
           Submit
         </Button>
-        {/* {form.showModal && <Modal />} */}
+        {form.showModal && <Modal />}
       </ContactForm>
     </>
   );

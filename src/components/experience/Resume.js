@@ -11,7 +11,21 @@ const StyledJobCtn = styled.div`
 const StyledResumeSectionTitles = styled(H2)`
   text-transform: uppercase;
   display: flex;
-  margin: 50px 0 10px 0;
+
+  @media ${p => p.theme.device.mobileS} {
+    margin: 30px 0 5px 0;
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  @media ${p => p.theme.device.tablet} {
+    font-size: ${p => p.theme.fontSizes.large};
+  }
+
+  @media ${p => p.theme.device.laptop} {
+    justify-content: flex-start;
+    margin: 50px 0 10px 0;
+  }
 `;
 const StyledResumeDownload = styled(Anchor)`
   background-color: ${p => p.theme.colors.taxiYellow};
@@ -19,12 +33,19 @@ const StyledResumeDownload = styled(Anchor)`
   display: flex;
   color: ${p => p.theme.colors.white};
   justify-content: center;
-  padding: 15px;
   font-size: 20px;
   letter-spacing: 2px;
   font-weight: ${p => p.theme.fontWeight.bold};
   &:visited {
     color: ${p => p.theme.colors.white};
+  }
+
+  @media ${p => p.theme.device.mobileS} {
+    padding: 8px;
+  }
+
+  @media ${p => p.theme.device.laptop} {
+    padding: 15px;
   }
 `;
 const Resume = () => (

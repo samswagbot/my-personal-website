@@ -29,11 +29,10 @@ const Bio = () => {
         in NY, at a company that values diversity & inclusion, fosters
         collobration and growth, and builds effective products for communities.
         With my experiance at
-        <BuzzWords>SoulCycle & Goldman Sachs</BuzzWords>, I applied my passion
+        <BuzzWords> SoulCycle & Goldman Sachs</BuzzWords>, I applied my passion
         for Front End technologies by contributing to large scale applications.
         To see more of my previous experiance check out my
         <Anchor href={ResumeFile} download="Samson Mossallam's Resume.pdf">
-          {' '}
           resume
         </Anchor>
         ,
@@ -81,12 +80,7 @@ const Bio = () => {
         studing audio engineering at{' '}
         <BuzzWords>SUNY Purchase Conservatory of Music</BuzzWords>, competing as
         a cellist in state-wide competitons or more recently, falling in love
-        with
-        <Anchor href="/djing" as={Link}>
-          {' '}
-          DJing{' '}
-        </Anchor>
-        music continues to find a way into my life.
+        with DJing music continues to find a way into my life.
       </StyledParagraph>
     </div>
   );

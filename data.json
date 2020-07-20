@@ -2,7 +2,7 @@
 {
         "Software Engineering": [    
             {
-                    "role": "Assiocate Software Engineer",
+                    "role": "Associate Software Engineer",
                     "company": "InRhythm via Goldman Sachs",
                     "jobTerm": "Jan 2020 - Mar 2020",
                     "techStack": "TypeScript, ReactJS, MobX, CSS3, JavaScript, git, MVVM design, Windows 10",
@@ -12,7 +12,7 @@
                     ]
                 },
                 {
-                    "role": "Assiocate Software Engineer",
+                    "role": "Associate Software Engineer",
                     "company": "SoulCycle",
                     "jobTerm": "Oct 2018 - Jan 2020",
                     "techStack": "ReactJS, CSS3, CSS-in-JS, JavaScript, git, PHP, Node.js, HTML5, RESTful API design, Docker, Sequelize, Jest, SCSS, LESS, Twig, TDD, Relational DB Theory, Accessibility",

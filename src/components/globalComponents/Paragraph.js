@@ -7,6 +7,14 @@ const StyledAnchor = styled.p`
   font-size: ${p => p.theme.fontSizes.small};
   text-align: ${p => p.theme.fontAlign.justify};
   font-weight: ${p => p.theme.fontWeight.thin};
+
+  @media ${p => p.theme.device.mobileS} {
+    margin-top: 5px;
+    text-align: ${p => p.theme.fontAlign.left};
+  }
+  @media ${p => p.theme.device.tablet} {
+    text-align: ${p => p.theme.fontAlign.justify};
+  }
 `;
 const Paragraph = ({ children, className }) => (
   <StyledAnchor className={className}>{children}</StyledAnchor>

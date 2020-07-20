@@ -7,12 +7,26 @@ const StyledCtn = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
+
+  @media ${p => p.theme.device.tablet} {
+    margin-top: 21px;
+  }
 `;
 
 const StyledWrapper = styled.div`
   margin-right: auto;
   margin-left: auto;
-  width: 50%;
+  @media ${p => p.theme.device.mobileS} {
+    width: 90%;
+  }
+
+  @media ${p => p.theme.device.tablet} {
+    width: 80%;
+  }
+
+  @media ${p => p.theme.device.laptop} {
+    width: 60%;
+  }
 `;
 const Container = ({ children }) => (
   <StyledCtn>
