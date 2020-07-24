@@ -1,15 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
-import { TransToolKit, LesbiansWhoTech } from 'Assets/documents/documents';
-import speaker from 'Assets/images/speaker.jpg';
-import InstagramEmbed from 'react-instagram-embed';
+import React from "react";
+import styled from "styled-components";
+import { TransToolKit, LesbiansWhoTech } from "Assets/documents/documents";
+import speaker from "Assets/images/speaker.jpg";
+import InstagramEmbed from "react-instagram-embed";
 import {
   H2,
   Anchor,
   Paragraph,
   H3,
-  MainContainer,
-} from 'Components/components';
+  MainContainer
+} from "Components/components";
 
 const StyledTalkSectionTitles = styled(H3)`
   text-transform: uppercase;
@@ -35,6 +35,14 @@ const StyledTalksTitles = styled(H2)`
 `;
 
 const StyledInstagramEmbed = styled(InstagramEmbed)`
+  width: 100%;
+  @media ${p => p.theme.device.mobileS} {
+    iframe {
+      min-width: 0 !important;
+      max-width: 100% !important;
+    }
+  }
+
   @media ${p => p.theme.device.tablet} {
     display: flex;
     justify-content: center;
@@ -62,7 +70,7 @@ const Talks = () => (
     <TalkDetails>
       "Freedom is the ability to be yourself without permission".
       <Anchor href={TransToolKit} download="Trans Tool Kit">
-        {' '}
+        {" "}
         Trans Toolkit
       </Anchor>
     </TalkDetails>
@@ -79,8 +87,8 @@ const Talks = () => (
         href={LesbiansWhoTech}
         download="Test Driven Development and Pair Programming: What You Need To Know"
       >
-        {' '}
-        slides{' '}
+        {" "}
+        slides{" "}
       </Anchor>
       from conference.
     </TalkDetails>
