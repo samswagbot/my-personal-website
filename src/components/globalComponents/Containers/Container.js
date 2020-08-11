@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const StyledCtn = styled.div`
   display: flex;
@@ -28,14 +28,14 @@ const StyledWrapper = styled.div`
     width: 60%;
   }
 `;
-const Container = ({ children }) => (
+const Container = ({ children, className }) => (
   <StyledCtn>
-    <StyledWrapper>{children}</StyledWrapper>
+    <StyledWrapper className={className}>{children}</StyledWrapper>
   </StyledCtn>
 );
 
 Container.propType = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element.isRequired
 };
 
 export default Container;

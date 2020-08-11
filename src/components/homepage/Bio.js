@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { LinkedinIcon } from 'Assets/svgs/svgs';
-import { Link } from 'react-router-dom';
-import { Anchor, Paragraph, H3 } from 'Components/components';
-import { ResumeFile, CoverLetter } from 'Assets/documents/documents';
+import React from "react";
+import styled from "styled-components";
+import { LinkedinIcon } from "Assets/svgs/svgs";
+import { Link } from "react-router-dom";
+import { Anchor, Paragraph, H3 } from "Components/components";
+import { ResumeFile, CoverLetter } from "Assets/documents/documents";
 
 const BuzzWords = styled.span`
   font-weight: ${p => p.theme.fontWeight.extraBold};
@@ -18,22 +18,24 @@ const StyledParagraph = styled(Paragraph)`
   }
 `;
 const Bio = () => {
-  const linkedin = 'https://www.linkedin.com/in/sammossallam/';
+  const linkedin = "https://www.linkedin.com/in/sammossallam/";
 
   return (
     <div>
       <H3>About:</H3>
       <StyledParagraph>
-        I'm currently{' '}
-        <BuzzWords>seeking an opportunity for a Front End role</BuzzWords> based
-        in NY, at a company that values diversity & inclusion, fosters
-        collobration and growth, and builds effective products for communities.
-        With my experiance at
+        I'm currently building products at{" "}
+        <Anchor href=" https://www.happycog.com/">
+          <BuzzWords>Happy Cog</BuzzWords>
+        </Anchor>{" "}
+        in NY. I'm focused on using my skills as a Front End Developer to build
+        elegant and sophisticated software. Developing clean code is always at
+        the front of my mind and upmost priority. With my experiance at
         <BuzzWords> SoulCycle & Goldman Sachs</BuzzWords>, I applied my passion
         for Front End technologies by contributing to large scale applications.
         To see more of my previous experiance check out my
         <Anchor href={ResumeFile} download="Samson Mossallam's Resume.pdf">
-          {' '}
+          {" "}
           resume
         </Anchor>
         ,
@@ -41,12 +43,12 @@ const Bio = () => {
           href={CoverLetter}
           download="Samson Mossallam's Cover Letter.pdf"
         >
-          {' '}
-          cover letter{' '}
-        </Anchor>{' '}
+          {" "}
+          cover letter{" "}
+        </Anchor>{" "}
         or
         <Anchor href={linkedin}>
-          {' '}
+          {" "}
           <LinkedinIcon />
         </Anchor>
         .
@@ -70,15 +72,15 @@ const Bio = () => {
         it's being a developer or a leader, I search to find effective,
         creative, and smart solutions. Check out my
         <Anchor href="/talksandcampaigns" as={Link}>
-          {' '}
-          talks and pride{' '}
-        </Anchor>{' '}
+          {" "}
+          talks and pride{" "}
+        </Anchor>{" "}
         at SoulCycle!
       </StyledParagraph>
       <H3>Before Coding:</H3>
       <StyledParagraph>
         Before coding, most of my life was dedicated to music. Whether it was
-        studing audio engineering at{' '}
+        studing audio engineering at{" "}
         <BuzzWords>SUNY Purchase Conservatory of Music</BuzzWords>, competing as
         a cellist in state-wide competitons or more recently, falling in love
         with DJing music continues to find a way into my life.

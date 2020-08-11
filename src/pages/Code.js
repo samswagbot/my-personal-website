@@ -1,19 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
-import { MainContainer, Container, CodeContainer } from 'Components/components';
+import React from "react";
+import styled from "styled-components";
+import { MainContainer, CodeContainer } from "Components/components";
 
-const StyledMainCtn = styled(Container)`
-  @media ${p => p.theme.device.tablet} {
-    div {
+const StyledMainCtn = styled(MainContainer)`
+  @media screen and (min-width: 768px) {
+    &:first-child {
       width: 90%;
     }
   }
 `;
+
 const Code = () => (
-  <MainContainer>
-    <StyledMainCtn>
-      <CodeContainer />
-    </StyledMainCtn>
-  </MainContainer>
+  <StyledMainCtn>
+    <CodeContainer />
+  </StyledMainCtn>
 );
 export default Code;

@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const StyledCodeSandBox = styled.iframe`
   width: 100%;
@@ -16,14 +16,12 @@ const CodeSandBox = ({ src, title }) => (
     title={title}
     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-    runonclick={1}
-    autoresize={1}
   />
 );
 
 CodeSandBox.propType = {
-  src: PropTypes.string,
-  title: PropTypes.string,
+  src: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default CodeSandBox;

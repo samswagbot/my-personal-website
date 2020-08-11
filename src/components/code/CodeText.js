@@ -6,11 +6,16 @@ import { H3, Span, Paragraph, DetailText, Anchor } from "Components/components";
 import { GithubIcon } from "Assets/svgs/svgs";
 
 const StyledCodeCtnText = styled.div`
-  justify-content: center;
-  width: 30%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  margin-left: 50px;
+  @media ${p => p.theme.device.mobileS} {
+    margin-top: 20px;
+  }
+
+  @media ${p => p.theme.device.tablet} {
+    margin-left: 20px;
+  }
 `;
 
 const StyledHeadingCtn = styled.div`

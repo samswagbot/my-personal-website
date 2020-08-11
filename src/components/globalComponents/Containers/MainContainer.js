@@ -4,7 +4,7 @@ import { NavBar, Container, Footer, MobileNavBar } from '../../components';
 import Theme from '../../../global/theme/Theme';
 import GlobalStyles from '../../../global/theme/GlobalStyles';
 
-const MainContainer = ({ children }) => {
+const MainContainer = ({ children, className }) => {
   const [width, setWidth] = useState(window.innerWidth);
   const isLaptop = 1024;
 
@@ -18,7 +18,7 @@ const MainContainer = ({ children }) => {
     <Theme>
       <GlobalStyles />
       {width < isLaptop ? <MobileNavBar /> : <NavBar />}
-      <Container>{children}</Container>
+      <Container className={className}>{children}</Container>
       {width < isLaptop && <Footer />}
     </Theme>
   );
