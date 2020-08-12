@@ -18,11 +18,7 @@ export default class ContactOne extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  /* Here’s the juicy bit for posting the form submission */
-
   handleSubmit(e) {
-    console.log(this.state);
-
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -43,9 +39,16 @@ export default class ContactOne extends React.Component {
     const { name, email, message } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit} data-netlify="true" name="sam-form">
-        <input type="hidden" name="form-name" value="contact" />
+      <form
+        netlify-honeypot="bot-field"
+        method="POST"
+        onSubmit={this.handleSubmit}
+        data-netlify="true"
+        name="sam-form"
+      >
         <p>
+
+            <input type="hidden" name="form-name" value="contact" />
           <label>
             Your Name:{" "}
             <input
