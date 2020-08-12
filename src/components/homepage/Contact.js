@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { H2, Input, Label, Button, Modal } from 'Components/components';
+import { H2, Input, Label, Button } from 'Components/components';
 
 const InputGroup = styled.div`
   position: relative;
@@ -24,13 +24,16 @@ const Contact = () => {
     name: '',
     email: '',
     msg: '',
-    showModal: false,
   });
 
-  const encode = data =>
-    Object.keys(data)
-      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-      .join('&');
+  const encode = data => {
+    const formData = new FormData();
+    Object.keys(data).forEach(k => {
+      formData.append(k, data[k]);
+    });
+    return formData;
+  };
+
   const updateFormValue = e => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -40,7 +43,7 @@ const Contact = () => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...form }),
+      body: encode({ 'form-name': 'contact', ...form })
     })
       .then(() => setForm({ ...form, showModal: true }))
       .catch(error => alert(error));
@@ -55,7 +58,6 @@ const Contact = () => {
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        hidden
         onSubmit={e => submitForm(e)}
       >
         <input type="hidden" name="form-name" value="contact" />
@@ -104,7 +106,6 @@ const Contact = () => {
         <Button type="submit" value="Submit">
           Submit
         </Button>
-        {form.showModal && <Modal />}
       </ContactForm>
     </>
   );
